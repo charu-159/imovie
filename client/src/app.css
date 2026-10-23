@@ -1,0 +1,410 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #f6f5f7;
+  background: #09090d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #09090d;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 7%;
+  border-bottom: 1px solid #25232a;
+  background: #0d0c11;
+}
+
+.brand {
+  border: 0;
+  background: transparent;
+  color: #f4f2f6;
+  font: 700 25px "Space Grotesk", sans-serif;
+}
+
+.brand span {
+  color: #ff3048;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-link {
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #aaa7b1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+}
+
+.signin,
+.primary-btn {
+  padding: 12px 22px;
+  border: 1px solid #ff3048;
+  border-radius: 7px;
+  background: #ff3048;
+  color: white;
+  font-weight: 700;
+}
+
+.signin:hover,
+.primary-btn:hover {
+  background: #d91c34;
+}
+
+.hero {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 65px 10%;
+  background:
+    radial-gradient(ellipse at 80% 50%, #301017 0%, transparent 40%),
+    #0b0a0f;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.eyebrow {
+  color: #ff596c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1,
+.content-section h1,
+.auth-card h1 {
+  font: 700 clamp(34px, 5vw, 57px) "Space Grotesk", sans-serif;
+  line-height: 1.13;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #ff3048;
+}
+
+.hero-text {
+  max-width: 490px;
+  color: #b6b2bd;
+  line-height: 1.8;
+  margin-bottom: 27px;
+}
+
+.hero-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 300px;
+  min-width: 180px;
+}
+
+.ticket {
+  width: 235px;
+  min-height: 285px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ff596c;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #7c1626, #180b11 70%);
+  transform: rotate(5deg);
+  box-shadow: 0 20px 60px #0008;
+}
+
+.ticket span,
+.ticket small {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.ticket strong {
+  font: 700 35px "Space Grotesk", sans-serif;
+}
+
+.movie-section,
+.content-section {
+  padding: 55px 8%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font: 600 30px "Space Grotesk", sans-serif;
+  margin: 8px 0;
+}
+
+.text-btn {
+  border: 0;
+  background: transparent;
+  color: #ff6879;
+  padding: 10px 0;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.movie-card {
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  color: white;
+  background: #131218;
+  border: 1px solid #292630;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff3048;
+}
+
+.poster {
+  min-height: 245px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  background-image: linear-gradient(0deg, #000b, transparent);
+}
+
+.poster span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #ffffffc7;
+}
+
+.poster strong {
+  font: 700 27px "Space Grotesk", sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.poster small {
+  color: #ffd166;
+}
+
+.movie-info {
+  padding: 4px 15px 15px;
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.movie-info p,
+.muted {
+  color: #a9a5b0;
+  font-size: 13px;
+}
+
+.search,
+.auth-card input {
+  width: 100%;
+  padding: 14px;
+  color: white;
+  background: #15141c;
+  border: 1px solid #34313d;
+  border-radius: 7px;
+  outline: none;
+}
+
+.search {
+  max-width: 480px;
+}
+
+.search:focus,
+.auth-card input:focus {
+  border-color: #ff3048;
+}
+
+.details-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) 1fr;
+  gap: 35px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.poster.large {
+  min-height: 360px;
+  border-radius: 10px;
+}
+
+.details-card h1 {
+  font: 700 40px "Space Grotesk", sans-serif;
+}
+
+.details-card p {
+  color: #b9b5c0;
+  line-height: 1.7;
+}
+
+.auth-section {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+  background: radial-gradient(ellipse at top, #301017, #09090d 65%);
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background: #15141c;
+  border: 1px solid #34313d;
+  border-radius: 12px;
+}
+
+.auth-card h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.auth-card .text-btn {
+  align-self: flex-start;
+}
+
+.full-width {
+  width: 100%;
+}
+
+footer {
+  padding: 28px 8%;
+  text-align: center;
+  border-top: 1px solid #25232a;
+  color: #aaa7b1;
+}
+
+footer strong {
+  color: #ff3048;
+  font: 700 23px "Space Grotesk", sans-serif;
+}
+
+footer small {
+  font-size: 11px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 18px 5%;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 50px 7%;
+  }
+
+  .hero-art {
+    display: none;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .poster {
+    min-height: 190px;
+  }
+
+  .details-card {
+    grid-template-columns: 1fr;
+  }
+
+  .poster.large {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .signin {
+    padding: 9px 13px;
+  }
+
+  .movie-section,
+  .content-section {
+    padding: 35px 5%;
+  }
+
+  .poster {
+    min-height: 160px;
+    padding: 10px;
+  }
+
+  .poster strong {
+    font-size: 21px;
+  }
+
+  .movie-info {
+    padding: 4px 10px 10px;
+  }
+}
+
